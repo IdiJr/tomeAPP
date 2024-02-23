@@ -1,2 +1,4 @@
 # tomeAPP
-This is an e-commerce app created as a requirement for Alx-SE program
+This is an e-commerce app created as a requirement for Alx-SE program.
+
+![](./logo.jpg)
