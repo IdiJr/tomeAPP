@@ -6,15 +6,15 @@ const { MONGO_OPTIONS } = require("../src/config");
 const { dropAllCollections, removeAllCollections } = require("./helpers");
 jest.setTimeout(60000);
 
-const MONGO_TEST_URI = `mongodb://admin2:${encodeURIComponent(
-  "example"
-)}@localhost:27018/test2`;
+const MONGO_TEST_URI = `mongodb://admin:${encodeURIComponent(
+  "password1"
+)}@localhost:27017/test`;
 module.exports = MONGO_TEST_URI;
 
 let testUser = {
   userEmail: "king@james.king23",
   password: "king!",
-  username: "lacavs",
+  username: "emma",
 };
 
 beforeAll(async () => {
