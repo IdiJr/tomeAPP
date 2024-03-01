@@ -1,5 +1,5 @@
-# TomeAPP :computer:
-The tomeapp is a grocery store management web App
+# GlosAPP :computer:
+The glosapp is a grocery store management web App
 
 Grocery Store Management System (GSMS)
 Table of Contents
@@ -37,7 +37,7 @@ Clone this repository to your web server directory:
 
 bash
 Copy code
-git clone https://github.com/IdiJr/tomeAPP.git
+git clone https://github.com/emmanueladdo/glosAPP.git
 Configure your web server to serve the application.
 Make sure HTML, PHP, Python (for Flask), and MySQL are properly set up.
 
