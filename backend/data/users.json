@@ -1,0 +1,11 @@
+{
+    "name": "Admin User",
+    "email": "admin@gmail.com",
+    "password": "adminpassword",
+    "avatar": {
+        "public_id": "samples/people/boy-snow-hoodie",
+        "url": "https://res.cloudinary.com/dr8x7u4ii/image/upload/v1709342325/samples/people/boy-snow-hoodie.jpg"
+    },
+    "role": "admin",
+    "createdAt": "2024-02-20T12:00:00.000Z"
+}

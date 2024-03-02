@@ -1,70 +1,72 @@
-# TomeAPP :computer:
-The tomeapp is a grocery store management web App
+# tomeAPP :computer:
 
-Grocery Store Management System (GSMS)
-Table of Contents
+This is an e-commerce app created as a requirement for Alx-SE program.
 
-Description
-Features
-Getting Started
-Prerequisites
-Installation
-Usage
-Contributing
-License
-Description
-The Grocery Store Management System (GSMS) is a web-based application built with the Flask framework, designed to assist grocery store owners in managing their orders and products. It provides an easy-to-use interface for creating and tracking orders, managing product inventory, and more.
+![](./logo.jpg)
 
-**#Features**
-Create new orders.
-Manage product inventory.
-View and track order history.
-Responsive design for different devices.
-User-friendly interface for grocery store management.
-Getting Started
+This is the frontend part of the Sabanci University's 2020-2021 Spring Term CS 308 Project. You can reach the backend part of this code from [buraksekili/ecommerce-backend](https://github.com/buraksekili/ecommerce-backend). 
 
-**#Prerequisites**
-To run the GSMS application, you need the following prerequisites:
+You can see the screenshots of the application from [screenshots](#screenshots) part. 
 
-1. Web server (e.g., Apache, Nginx)
-2. PHP (Hypertext Preprocessor)
-3. Python (for Flask)
-4. MySQL Database
-5. Web browser (e.g., Chrome, Firefox)
+## What does this project include?
+- User creation and authentication
+- Sort products by categories, comment count, price and rate. 
+- Search and add the products to cart. 
+- Comment and rate products
+- Register products to be notified when there is a sale
+- Email notification service
+- Create orders
+- Refund mechanism
+- User Profile Page
+- Add, delete, change products from admin panel
+- Manage orders and comments from admin panel
 
-**#Installation**
-Clone this repository to your web server directory:
+In short terms, this project covers the basics of a e-commerce website. We named it tome which is Akan for "Buy me"
 
-bash
-Copy code
-git clone https://github.com/IdiJr/tomeAPP.git
-Configure your web server to serve the application.
-Make sure HTML, PHP, Python (for Flask), and MySQL are properly set up.
 
-Create a MySQL database and import the necessary schema and data.
-The database connection details should be configured in the Flask application.
+## How to run the project
+1. First you need to clone the project with and go to directory
+	```
+	> git clone https://github.com/IdiJr/tomeAPP.git
+	> npm i --force
+	```
+2. Then you need to go to open a second terminal, move into the [frontend](./frontend) part and install the dependencies with
+	```
+	> cd frontend && npm i --force
+	```
+3. Populate the user, categories, and products collection by running
+    ```
+    > node populateDatabase.js
+    ```
+4. ## You have to fill in the details for the [backend/config/config.env](./backend/config/config.env) like this:
+```
+PORT= 4000
+NODE_ENV= Development
 
-Open your web browser and access the Flask application URL.
+DB_LOCAL_URI = "mongodb://localhost:27017/your_database_name"
+FRONT_END_URL = "http://localhost:3000"
 
-**#Usage**
-**Login:** Enter your login credentials to access the GSMS dashboard.
+JWT_SECRET = SDJASDAI7923847HUSHCU88HJDSFH7HDS8
+JWT_EXPIRES_TIME = 7d
+COOKIES_EXPIRES_TIME = 7d
 
-**Dashboard:** Navigate the dashboard to access various features such as creating new orders and managing products.
+STRIPE_SECRET_KEY = your_stripe_secret
+STRIPE_API_KEY = your_stripe_api
 
-**Orders**: Create and manage customer orders. Track order history, including date, order number, customer name, and total cost.
+SMTP_HOST = smtp.mailtrap.io
+SMTP_PORT = 2525
+SMTP_EMAIL = 
+SMTP_PASSWORD = 
+SMTP_FROM_EMAIL = noreply@tome.com
+SMTP_FROM_NAME = tome
 
-**Products**: Manage your product inventory. View product details, update product information, and add new products.
+CLOUDINARY_CLOUD_NAME = your_cloudinary_cloud_name
+CLOUDINARY_API_KEY= your_cloudinary_api_key
+CLOUDINARY_API_SECRET= your_cloudinary_api_secret
+```
+5. Then you need to start the server first in the backend terminal then, in the frontend terminal
+	```
+	> npm start
+	```
 
-**#Contributing**
-We welcome contributions from the community to enhance and improve the Grocery Store Management System.
-If you'd like to contribute, please follow these steps:
-
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them.
-Push your changes to your fork.
-Create a pull request to the main repository.
-Please ensure that your code follows best practices, is well-documented, and has been thoroughly tested.
-
-**License**
-This project is licensed under the MIT License - see the LICENSE file for details.
+Then it will run the project at `localhost:4000`. If there is any errors when frontend tries to connect to backend (proxy errors), change the proxy to point to backend in `package.json`.
