@@ -30,7 +30,7 @@ In short terms, this project covers the basics of a e-commerce website. We named
     ```
     > node populateDatabase.js
     ```
-4. ## You have to fill in the details for the [backend/config/config.env](./backend/config/config.env) like this:
+4. ## You have to fill in the details for the [backend/config/config.env](./backend/config) like this:
 ```
 PORT= 4000
 NODE_ENV= Development
