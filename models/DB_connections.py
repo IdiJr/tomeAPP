@@ -19,7 +19,7 @@ def get_sql_connection():
             user="gstore",
             password="password",
             host="127.0.0.1",
-            database="glosapp",
+            database="tomeapp",
             port="3306"
         )
         return __connection

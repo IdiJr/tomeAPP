@@ -95,5 +95,5 @@ def delete_product():
 
 
 if __name__ == "__main__":
-    print("Starting GlosAPP")
+    print("Starting tomeAPP")
     app.run(port=5000)
