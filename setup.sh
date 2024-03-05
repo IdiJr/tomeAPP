@@ -10,5 +10,6 @@ apt-get install -y python3 mysql-server
 pip install mysql-connector-python Flask SQLAlchemy
 
 # Setup database to be populated
-service mysql start
+systemctl enable mysql
+systemctl start mysql
 cat tomeAPP_sql_query.sql | mysql
