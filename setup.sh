@@ -12,4 +12,4 @@ pip install mysql-connector-python Flask SQLAlchemy
 # Setup database to be populated
 systemctl enable mysql
 systemctl start mysql
-cat tomeAPP_sql_query.sql | mysql
+cat tomeApp_sql_query.sql | mysql
