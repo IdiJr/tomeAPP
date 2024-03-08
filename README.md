@@ -56,7 +56,7 @@ This architecture is designed to be modular and scalable, allowing for updates a
 
 ## Getting Started
 ### Prerequisites
-- PHP >= 8.2
+- PHP >= 7.4
 - Composer
 - Docker
 - npm or Yarn
